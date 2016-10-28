@@ -1,0 +1,15 @@
+import cv2
+import numpy as np
+pic = cv2.imread('David.jpg')
+
+height = pic.shape[1]
+width = pic.shape[0]
+
+scale_width = 3*width
+scale_height = 3*height
+
+scaling = cv2.resize(pic,(scale_width,scale_height), interpolation= cv2.INTER_CUBIC)
+cv2.imshow('scaled',scaling)
+
+cv2.waitKey(0)
+cv2.destroyAllWindows()
